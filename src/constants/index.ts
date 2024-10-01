@@ -1,1 +1,1 @@
-export const TEMPLATE = {};
+export const TEMPLATE = {}

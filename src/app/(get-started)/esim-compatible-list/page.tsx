@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const EsimCompatibleListPage = () => {
-  return <div>EsimCompatibleListPage</div>;
-};
+  return <div>EsimCompatibleListPage</div>
+}
 
-export default EsimCompatibleListPage;
+export default EsimCompatibleListPage

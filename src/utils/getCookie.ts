@@ -1,1 +1,3 @@
-export function getCookie(name: string) {}
+export function getCookie(name: string) {
+  return name
+}

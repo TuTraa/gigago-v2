@@ -1,5 +1,5 @@
 const BuyEsimPage = () => {
-  return <div>BuyEsimPage</div>;
-};
+  return <div>BuyEsimPage</div>
+}
 
-export default BuyEsimPage;
+export default BuyEsimPage

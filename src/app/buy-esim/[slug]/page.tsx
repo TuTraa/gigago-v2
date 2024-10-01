@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const EsimPage = () => {
-  return <div>EsimPage</div>;
-};
+  return <div>EsimPage</div>
+}
 
-export default EsimPage;
+export default EsimPage

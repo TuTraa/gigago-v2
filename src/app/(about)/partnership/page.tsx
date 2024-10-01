@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const PartnerShipPage = () => {
-  return <div>PartnerShipPage</div>;
-};
+  return <div>PartnerShipPage</div>
+}
 
-export default PartnerShipPage;
+export default PartnerShipPage

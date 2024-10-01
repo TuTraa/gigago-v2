@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const InstallationGuidePage = () => {
-  return <div>InstallationGuidePage</div>;
-};
+  return <div>InstallationGuidePage</div>
+}
 
-export default InstallationGuidePage;
+export default InstallationGuidePage
