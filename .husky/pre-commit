@@ -1,25 +1,23 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# npx lint-staged
 echo 'Styling, testing and building your project before commiting'
 
-# npm run test-all
 
 npm run check-format || (
-       echo '🤢🤮Your styling looks disgusting🤢🤮 Prettier check failed !! Run `npm run format`, add changes and try commit again.'
+       echo '🤢🤮 Prettier check failed !! 🤢🤮  Run `npm run format`, add changes and try commit again.'
        false;
 )
 npm run check-lint || (
-       echo '😤🏀Get that weak shit out of here😤🏀 ESLint Check Failed !! Make the required changes listed above, add changes and try to commit again.'
+       echo '😤🏀 ESLint Check Failed !! 😤🏀  Make the required changes listed above, add changes and try to commit again.'
        false;
 )
 npm run check-types || (
-       echo '🤡😂Failed Check Types😂🤡 Are you seriously trying to write that ? Make the changes required above.'
+       echo '🤡😂 Failed Check Types !! 😂🤡 Are you seriously trying to write that ? Make the changes required above.'
        false;
 )
 
-echo '🤔🤔...Alright ^_^... Code looks good to me... Trying to build now.🤔🤔'
+echo '🤔🤔 Alright ! Code looks good to me... Trying to build now.🤔🤔'
 
 npm run build ||
 (
@@ -27,4 +25,4 @@ npm run build ||
        false;
 )
 
-echo  '✅✅✅✅ You win this time... I am comming this now...  Building successfully !! ✅✅✅✅'undefined
+echo  '✅ YOU WIN! Building successfully! ✅'
