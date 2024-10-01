@@ -1,7 +1,21 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/no-require-imports": "off", // Disable the rule
-    "@typescript-eslint/no-unused-vars": "off" // Disable the rule
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "ignoreRestSiblings": true }
+    ],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "no-console": "warn",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
