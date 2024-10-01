@@ -1,11 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended"
-  ],
+  "extends": ["next/core-web-vitals", "next/typescript"],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/no-require-imports": "off", // Disable the rule
