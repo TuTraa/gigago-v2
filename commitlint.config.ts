@@ -1,8 +1,14 @@
 import type { UserConfig } from '@commitlint/types'
 const Configuration: UserConfig = {
   extends: ['@commitlint/config-conventional'],
-  parserPreset: 'conventional-changelog-atom',
+  // parserPreset: 'conventional-changelog-atom',
   formatter: '@commitlint/format',
+  parserPreset: {
+    parserOpts: {
+      headerPattern: /^\[(.*?)\] - (.*?):(.*),\s*jira_id:\s*#(\d+)/,
+      headerCorrespondence: ['platform', 'type', 'subject', 'jira_id'],
+    },
+  },
   rules: {
     'type-enum': [
       2,
