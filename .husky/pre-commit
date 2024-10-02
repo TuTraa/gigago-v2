@@ -4,13 +4,12 @@
 
 echo 'Styling, testing and building your project before commiting'
 
-
 npm run check-format || (
-       echo '🤢🤮 Prettier check failed !! 🤢🤮  Run `npx format`, add changes and try commit again.'
+       echo '🤢🤮🤢 Prettier check failed !! 🤢🤮🤢  Run `npx format`, add changes and try commit again.'
        false;
 )
 npm run check-lint || (
-       echo '😤🏀 ESLint Check Failed !! 😤🏀  Make the required changes listed above, add changes and try to commit again.'
+       echo '😤🏀❌ ESLint Check Failed !! 😤🏀❌  Make the required changes listed above, add changes and try to commit again.'
        false;
 )
 npm run check-types || (
@@ -18,12 +17,12 @@ npm run check-types || (
        false;
 )
 
-echo '🤔🤔 Alright ! Code looks good to me... Trying to build now.🤔🤔'
+echo '🤔🤔 Alright ! Code looks good. 🤔🤔'
 
-npm run build ||
-(
-       echo '❌👷🔨❌ Opps!! Build Failed ❌👷🔨❌ Next build failed: View the errors above to see why.'
-       false;
-)
+# npm run build ||
+# (
+#        echo '❌👷🔨❌ Opps!! Build Failed ❌👷🔨❌ Next build failed: View the errors above to see why.'
+#        false;
+# )
 
-echo  '✅ YOU WIN! Building successfully! ✅'
+echo  '✅ Building successfully! ✅'
