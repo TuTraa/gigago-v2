@@ -11,12 +11,15 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      sm: '640px',
+      sm: '549px',
       md: '768px',
       lg: '1024px',
       xl: '1200px',
     },
     extend: {
+      backgroundImage: {
+        'background-hero': 'url(/assets/images/bg-hero.webp)',
+      },
       colors: {
         primary: '#4600B9',
         secondary: '#0094FF',
@@ -38,7 +41,7 @@ const config: Config = {
       keyframes: {},
       animation: {},
       maxWidth: {
-        sm: '640px',
+        sm: '549px',
         md: '768px',
         lg: '1024px',
         xl: '1200px',

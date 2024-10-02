@@ -8,7 +8,8 @@
       { "ignoreRestSiblings": true }
     ],
     "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-empty-object-type": "off",
     "no-console": "warn",
     "react-hooks/exhaustive-deps": "warn"
   }

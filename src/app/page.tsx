@@ -1,4 +1,9 @@
-// interface Iprops {}
+import HeroSection from '@/views/Homepage/HeroSection'
+
 export default function Home() {
-  return <div className='h-[1000px] bg-gray-200'></div>
+  return (
+    <div className='min-h-[1200px] flex w-full flex-col'>
+      <HeroSection />
+    </div>
+  )
 }

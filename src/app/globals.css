@@ -17,10 +17,10 @@
     --radius: 0.5rem;
   }
 }
-.navigation__item a {
+.navigation__item > a {
   position: relative;
 }
-.navigation__item a:after {
+.navigation__item > a:after {
   position: absolute;
   content: '';
   display: block;
@@ -33,40 +33,53 @@
   transition-duration: 0.2s;
   background-color: #4600b9;
 }
-.navigation__item a:hover:after {
+.navigation__item > a:hover:after {
   opacity: 1;
 }
 .navigation__subList {
-  width: 300px;
+  width: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  top: 100%;
+  right: 0;
   height: 0;
+  padding: 5px 15px;
   opacity: 0;
   overflow: hidden;
   transition-duration: 0.2s;
   background-color: white;
   border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0px 10px 12px -3px rgba(0, 0, 0, 0.06);
 }
 .navigation__subTab {
-  width: 100%;
+  width: calc(100% - 30px);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   height: 0;
   opacity: 0;
   overflow: hidden;
   transition-duration: 0.5s;
   background-color: white;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 12px -3px rgba(0, 0, 0, 0.06);
 }
 .navigation__item:hover > .navigation__subList {
   opacity: 1;
-  height: 400px;
+  height: fit-content;
 }
 .navigation__item:hover > .navigation__subTab {
   opacity: 1;
-  height: auto;
+  height: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .tabBtn__active {
   position: relative;
+  color: #4600b9;
+  font-weight: 600;
 }
 .tabBtn__active:after {
   position: absolute;
@@ -81,6 +94,7 @@
 
 .animation-tab-content {
   opacity: 1;
+  height: 100%;
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;

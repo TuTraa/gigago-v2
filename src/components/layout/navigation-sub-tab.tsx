@@ -1,6 +1,8 @@
 'use client'
 import { cn } from '@/utils/cn'
+import Link from 'next/link'
 import React, { useState } from 'react'
+import { ChevronRight } from 'lucide-react'
 const areasData = [
   {
     label: 'Most popular',
@@ -18,70 +20,54 @@ const NavigationSubTab = () => {
     const onClick = () => {
       setActiveTab(area.value)
     }
-    const classActive =
-      area.value === activeTab
-        ? 'tabBtn__active text-primary font-semibold'
-        : ''
+    const activeClass = area.value === activeTab ? 'tabBtn__active' : ''
     return (
       <div
         key={idx}
         onClick={onClick}
         className={cn(
           `w-full px-[16px] py-[14px] font-medium text-black/70 hover:text-primary cursor-pointer`,
-          classActive,
+          activeClass,
         )}
       >
-        <span className=''>{area.label}</span>
+        <span>{area.label}</span>
       </div>
     )
   })
   return (
-    <div className={cn('navigation__subTab absolute top-full left-0 flex')}>
-      <div className='w-[25%] h-fit border-r-[1px]'>{renderTabButtons}</div>
-      <div className='flex-1 '>
-        {
-          <div
-            className={` ${activeTab === 1 ? 'animation-tab-content' : 'opacity-0 h-0 overflow-hidden'} p-[20px] h-full`}
-          >
-            1
-          </div>
-        }
-        {
-          <div
-            className={` ${activeTab === 2 ? 'animation-tab-content' : 'opacity-0  h-0 overflow-hidden'} p-[20px] h-full`}
-          >
-            2
-          </div>
-        }
-        {
-          <div
-            className={` ${activeTab === 3 ? 'animation-tab-content' : 'opacity-0  h-0 overflow-hidden'} p-[20px] h-full`}
-          >
-            3
-          </div>
-        }
-        {
-          <div
-            className={` ${activeTab === 4 ? 'animation-tab-content' : 'opacity-0  h-0 overflow-hidden'} p-[20px] h-full`}
-          >
-            4
-          </div>
-        }
-        {
-          <div
-            className={` ${activeTab === 5 ? 'animation-tab-content' : 'opacity-0  h-0 overflow-hidden'} p-[20px] h-full`}
-          >
-            5
-          </div>
-        }
-        {
-          <div
-            className={` ${activeTab === 6 ? 'animation-tab-content' : 'opacity-0  h-0 overflow-hidden'} p-[20px] h-full`}
-          >
-            6
-          </div>
-        }
+    <div className='navigation__subTab'>
+      <div className='flex w-full'>
+        <div className='w-[25%] h-fit border-r-[1px]'>{renderTabButtons}</div>
+        <div className='flex-1'>
+          {activeTab === 1 && (
+            <div className={`animation-tab-content p-[20px]`}>1</div>
+          )}
+          {activeTab === 2 && (
+            <div className={`animation-tab-content p-[20px]`}>2</div>
+          )}
+          {activeTab === 3 && (
+            <div className={`animation-tab-content p-[20px]`}>3</div>
+          )}
+          {activeTab === 4 && (
+            <div className={`animation-tab-content p-[20px]`}>4</div>
+          )}
+          {activeTab === 5 && (
+            <div className={`animation-tab-content p-[20px]`}>5</div>
+          )}
+          {activeTab === 6 && (
+            <div className={`animation-tab-content p-[20px]`}>6</div>
+          )}
+        </div>
       </div>
+      <>
+        <Link
+          href='/buy-esim'
+          className='w-full inline-block bg-gray-100 text-center py-6  text-primary font-semibold'
+        >
+          See all destinations{' '}
+          <ChevronRight className='size-[16px] inline-block ml-[2px] mb-[2px]' />{' '}
+        </Link>
+      </>
     </div>
   )
 }
