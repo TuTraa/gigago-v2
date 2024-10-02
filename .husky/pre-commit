@@ -5,7 +5,7 @@
 echo 'Styling, testing and building your project before commiting'
 
 npm run check-format || (
-       echo '🤢🤮🤢 Prettier check failed !! 🤢🤮🤢  Run `npx format`, add changes and try commit again.'
+       echo '🤢🤮🤢 Prettier check failed !! 🤢🤮🤢  Run `npx prettier . --write`, add changes and try commit again.'
        false;
 )
 npm run check-lint || (
@@ -21,4 +21,4 @@ echo '🤔🤔 Alright ! Code looks good. 🤔🤔'
 
 
 
-echo  '✅ Building successfully! ✅'
+echo  '✅ Pass all tests successfully! ✅'

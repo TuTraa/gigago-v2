@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -36,6 +37,12 @@ const config: Config = {
       },
       keyframes: {},
       animation: {},
+      maxWidth: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1200px',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
