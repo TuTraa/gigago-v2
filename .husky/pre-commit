@@ -19,10 +19,6 @@ npm run check-types || (
 
 echo '🤔🤔 Alright ! Code looks good. 🤔🤔'
 
-# npm run build ||
-# (
-#        echo '❌👷🔨❌ Opps!! Build Failed ❌👷🔨❌ Next build failed: View the errors above to see why.'
-#        false;
-# )
+
 
 echo  '✅ Building successfully! ✅'
