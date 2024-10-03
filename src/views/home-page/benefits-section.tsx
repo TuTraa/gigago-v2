@@ -8,9 +8,9 @@ const BenefitsSection = () => {
   return (
     <div className='pt-[80px] bg-background-benefit bg-center bg-cover'>
       <div className='max-w-xl w-full mx-auto px-[15px]'>
-        <div className='flex items-end'>
-          <div className='w-1/2 pr-[30px]'>
-            <div className='relative size-full'>
+        <div className='flex flex-col md:flex-row gap-y-[40px] md:gap-y-0 items-center md:items-end'>
+          <div className='w-full md:w-1/2 pr-0 md:pr-[30px]'>
+            <div className='relative flex items-end justify-center size-full'>
               <Image
                 src='/assets/images/benefit.webp'
                 width={960}
@@ -20,9 +20,9 @@ const BenefitsSection = () => {
               />
             </div>
           </div>
-          <div className='w-1/2 pl-[15px]'>
+          <div className='w-full md:w-1/2 pl-[15px]'>
             <div className='relative pb-[40px]'>
-              <h2 className='text-[34px] font-semibold mb-[50px] max-w-[490px] leading-[1.17]'>
+              <h2 className='text-[34px] font-semibold mb-[50px] text-center max-w-full md:max-w-[490px] leading-[1.17]'>
                 How Gigago.com{' '}
                 <span className='text-primary'>benefits you</span>
               </h2>
@@ -31,7 +31,7 @@ const BenefitsSection = () => {
                   <div className='size-[56px] flex items-center justify-center rounded-full bg-[#00DFFF] mr-[18px]'>
                     <Wifi className='size-[28px] text-white' />
                   </div>
-                  <div className=''>
+                  <div className='flex-1'>
                     <p className='text-[20px] font-semibold mb-[8px]'>
                       It is digital
                     </p>
@@ -82,7 +82,10 @@ const BenefitsSection = () => {
                   </div>
                 </div>
               </div>
-              <Link href='#' className='text-primary underline'>
+              <Link
+                href='#'
+                className='block md:inline-block mx-auto w-fit text-primary underline'
+              >
                 Learn more about installing an eSIM
               </Link>
             </div>
