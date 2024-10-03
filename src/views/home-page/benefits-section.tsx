@@ -6,7 +6,7 @@ import { IoSettings, IoShareSocial } from 'react-icons/io5'
 import Link from 'next/link'
 const BenefitsSection = () => {
   return (
-    <div className='pt-[80px] bg-background-benefit bg-center bg-cover'>
+    <div className='pt-[40px] md:pt-[80px] bg-background-benefit bg-center bg-cover'>
       <div className='max-w-xl w-full mx-auto px-[15px]'>
         <div className='flex flex-col md:flex-row gap-y-[40px] md:gap-y-0 items-center md:items-end'>
           <div className='w-full md:w-1/2 pr-0 md:pr-[30px]'>

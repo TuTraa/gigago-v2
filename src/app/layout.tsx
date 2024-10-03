@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import TopBar from '@/components/layout/top-bar'
-import NavigationBar from '@/components/layout/navigation-bar'
+import TopBar from '@/components/navigation-bar/top-bar'
+import NavigationBar from '@/components/navigation-bar/navigation-bar'
 import { INavItem } from '@/types'
 import OnTop from '@/components/on-top'
 import Footer from '@/components/layout/footer'
+import Script from 'next/script'
+import { mobileInlineScript } from '@/components/navigation-bar/mobileInlineScript'
 // import localFont from 'next/font/local'
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
@@ -105,6 +107,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={` ${inter.className} antialiased`}>
+        <Script
+          id='mobileMenuLogic'
+          strategy='beforeInteractive'
+        >{`${mobileInlineScript}`}</Script>
         <TopBar />
         <NavigationBar items={navigationItems} />
         {children}

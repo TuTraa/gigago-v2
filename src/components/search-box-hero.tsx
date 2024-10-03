@@ -41,8 +41,8 @@ const SearchBoxHero = () => {
         />
         {isOpen && (
           <div className='absolute top-[calc(100%+18px)] left-0 w-full h-fit'>
-            <div className='px-[20px] bg-white rounded-lg h-[300px] sm:h-[400px] shadow-[-6px_8px_16px_rgba(58,42,152,.1)] overflow-y-scroll'>
-              <div className='px-[14px] mt-[20px] mb-[6px]'>
+            <div className='px-[20px]  bg-white rounded-lg h-[300px] sm:h-[400px] shadow-[-6px_8px_16px_rgba(58,42,152,.1)] overflow-y-scroll'>
+              <div className='px-[14px] font-semibold mt-[20px] mb-[6px]'>
                 <span>Local eSIM</span>
               </div>
               <ul className='flex flex-col'>

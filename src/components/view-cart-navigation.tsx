@@ -19,17 +19,17 @@ const ViewCartNavigation = () => {
     <div>
       <Drawer direction='right' open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger asChild>
-          <div className=''>
+          <div className='flex items-center justify-center size-[26px]'>
             <Image
               src='/assets/images/cart_gigago.svg'
-              width={26}
-              height={26}
+              width={24}
+              height={24}
               alt='cart'
               className='cursor-pointer'
             />
           </div>
         </DrawerTrigger>
-        <DrawerContent className='h-screen w-[500px] fixed top-0 right-0'>
+        <DrawerContent className='h-screen w-[300px] md:w-[500px] fixed top-0 right-0'>
           <div className=''>
             <DrawerHeader className='flex items-center justify-between px-[30px] py-[25px]'>
               <DrawerTitle className='text-[24px]'>My cart</DrawerTitle>

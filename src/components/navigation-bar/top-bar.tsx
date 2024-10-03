@@ -3,7 +3,7 @@ import React from 'react'
 const TopBar = () => {
   return (
     <>
-      <div className='bg-[#f9f9f9]'>
+      <div className='hidden md:block bg-[#f9f9f9]'>
         <div className='w-full max-w-xl h-[44px] mx-auto flex items-center justify-between px-[15px] '>
           <div>
             <p className='text-black text-[12px]'>
