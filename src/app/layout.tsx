@@ -5,6 +5,7 @@ import TopBar from '@/components/layout/top-bar'
 import NavigationBar from '@/components/layout/navigation-bar'
 import { INavItem } from '@/types'
 import OnTop from '@/components/on-top'
+import Footer from '@/components/layout/footer'
 // import localFont from 'next/font/local'
 // const geistSans = localFont({
 //   src: './fonts/GeistVF.woff',
@@ -108,6 +109,7 @@ export default function RootLayout({
         <NavigationBar items={navigationItems} />
         {children}
         <OnTop />
+        <Footer />
       </body>
     </html>
   )

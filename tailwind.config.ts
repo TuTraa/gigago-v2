@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
     screens: {
       sm: '549px',
-      md: '768px',
+      md: '849px',
       lg: '1024px',
       xl: '1200px',
     },
@@ -40,9 +40,16 @@ const config: Config = {
       },
       keyframes: {},
       animation: {},
+      fontSize: {
+        sm: '12px',
+        md: '14px',
+        normal: '16px',
+        lg: '20px',
+        xl: '24px',
+      },
       maxWidth: {
         sm: '549px',
-        md: '768px',
+        md: '849px',
         lg: '1024px',
         xl: '1200px',
       },
