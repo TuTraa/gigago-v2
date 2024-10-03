@@ -5,13 +5,15 @@ import Link from 'next/link'
 import React from 'react'
 
 const NavigationItem = ({ singleMenuItem }: { singleMenuItem: INavItem }) => {
+  const isHaveSubListMenu = singleMenuItem.subListMenu.length > 0
+  const isHaveSubTabMenu = singleMenuItem.isSubTabMenu
   return (
     <Link
       href={singleMenuItem.href || '#'}
       className={`h-full px-2 inline-flex items-center font-medium`}
     >
       {singleMenuItem.text}
-      {(singleMenuItem.subListMenu || singleMenuItem.isSubTabMenu) && (
+      {(isHaveSubListMenu || isHaveSubTabMenu) && (
         <i>
           <ChevronDown className='ml-[2px] size-[16px] text-black/60' />
         </i>

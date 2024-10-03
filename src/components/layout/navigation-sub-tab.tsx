@@ -20,7 +20,8 @@ const NavigationSubTab = () => {
     const onClick = () => {
       setActiveTab(area.value)
     }
-    const activeClass = area.value === activeTab ? 'tabBtn__active' : ''
+    const activeClass =
+      area.value === activeTab ? 'navigation-tabBtn__active' : ''
     return (
       <div
         key={idx}

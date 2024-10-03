@@ -5,7 +5,10 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  height: 100%;
+  overflow: auto;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -76,17 +79,17 @@
   height: fit-content;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.tabBtn__active {
+.navigation-tabBtn__active {
   position: relative;
   color: #4600b9;
-  font-weight: 600;
+  font-weight: 500;
 }
-.tabBtn__active:after {
+.navigation-tabBtn__active:after {
   position: absolute;
   content: '';
   top: 0;
   left: 0;
-  width: 3px;
+  width: 2px;
   height: 100%;
   background-color: #4600b9;
   transition-duration: 0.2s;
@@ -98,4 +101,55 @@
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+.groupTab__mobile {
+  position: relative;
+}
+.groupTab__mobile:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.06);
+  transition-duration: 0.2s;
+}
+.tabBtn,
+.tabBtn__mobile {
+  position: relative;
+}
+.tabBtn.active {
+  color: #4600b9;
+  font-weight: 500;
+}
+.tabBtn__mobile.active {
+  color: #4600b9;
+  font-weight: 500;
+}
+.tabBtn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.06);
+  transition-duration: 0.2s;
+}
+.tabBtn__mobile:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition-duration: 0.2s;
+}
+.tabBtn.active:after {
+  background-color: #4600b9;
+}
+.tabBtn__mobile.active:after {
+  background-color: #4600b9;
 }

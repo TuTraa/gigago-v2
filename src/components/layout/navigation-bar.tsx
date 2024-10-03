@@ -14,13 +14,14 @@ interface IProps {
 const NavigationBar = ({ items }: IProps) => {
   const renderItems = items?.map((item, idx) => {
     const isHaveSubListMenu = item.subListMenu.length > 0
+    const isHaveSubTabMenu = item.isSubTabMenu
     return (
       <li
         key={idx}
         className={`navigation__item flex items-center justify-center ${isHaveSubListMenu ? 'relative' : ''}`}
       >
         <NavigationItem singleMenuItem={item} />
-        {!!item.isSubTabMenu && <NavigationSubTab />}
+        {isHaveSubTabMenu && <NavigationSubTab />}
         {isHaveSubListMenu && (
           <NavigationSubList menuSubList={item.subListMenu} />
         )}
@@ -29,7 +30,7 @@ const NavigationBar = ({ items }: IProps) => {
   })
   return (
     <>
-      <div className='bg-white sticky top-0 left-0 z-[20] shadow-sm'>
+      <div className='bg-white sticky top-0 left-0 z-[20] shadow-md'>
         <div className='relative w-full max-w-xl h-[64px] mx-auto flex items-center justify-between px-[15px] '>
           <Link href='/'>
             <Image

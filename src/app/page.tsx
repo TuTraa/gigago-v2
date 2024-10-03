@@ -1,11 +1,11 @@
-import AreaSection from '@/views/Homepage/area-section'
-import AskedQuestionsSection from '@/views/Homepage/asked-questions-section'
-import BenefitsSection from '@/views/Homepage/benefits-section'
-import DeviceCompatibilitySection from '@/views/Homepage/device-compatibility-section'
-import FeedbackSection from '@/views/Homepage/feedback-section'
-import HeroSection from '@/views/Homepage/hero-section.tsx'
-import IntroduceSection from '@/views/Homepage/introduce-section'
-import WhyImBestSection from '@/views/Homepage/why-im-best-section'
+import AreaSection from '@/views/home-page/area-section'
+import AskedQuestionsSection from '@/views/home-page/asked-questions-section'
+import BenefitsSection from '@/views/home-page/benefits-section'
+import DeviceCompatibilitySection from '@/views/home-page/device-compatibility-section'
+import FeedbackSection from '@/views/home-page/feedback-section'
+import HeroSection from '@/views/home-page/hero-section.tsx'
+import IntroduceSection from '@/views/home-page/introduce-section'
+import WhyImBestSection from '@/views/home-page/why-im-best-section'
 
 export default function Home() {
   return (
