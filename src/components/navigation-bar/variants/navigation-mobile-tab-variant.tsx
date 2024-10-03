@@ -1,21 +1,21 @@
 'use client'
-import { cn } from '@/utils/cn'
+// import { cn } from '@/utils/cn'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { ChevronRight } from 'lucide-react'
-const areasData = [
-  {
-    label: 'Most popular',
-    value: 1,
-  },
-  { label: 'Asia', value: 2 },
-  { label: 'Europe', value: 3 },
-  { label: 'Ameria', value: 4 },
-  { label: 'Africa', value: 5 },
-  { label: 'Oceania', value: 6 },
-]
+// const areasData = [
+//   {
+//     label: 'Most popular',
+//     value: 1,
+//   },
+//   { label: 'Asia', value: 2 },
+//   { label: 'Europe', value: 3 },
+//   { label: 'Ameria', value: 4 },
+//   { label: 'Africa', value: 5 },
+//   { label: 'Oceania', value: 6 },
+// ]
 const NavigationMobileTabVariant = () => {
-  const [activeTab, setActiveTab] = useState(1)
+  // const [activeTab, setActiveTab] = useState(1)
   // const renderTabButtons = areasData.map((area, idx) => {
   //   const onClick = () => {
   //     setActiveTab(area.value)
