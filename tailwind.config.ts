@@ -19,6 +19,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'background-hero': 'url(/assets/images/bg-hero.webp)',
+        'background-benefit': 'url(/assets/images/bg-benefit.webp)',
       },
       colors: {
         primary: '#4600B9',

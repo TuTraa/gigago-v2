@@ -1,20 +1,23 @@
 'use client'
 import { cn } from '@/utils/cn'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import TabsContent from './tabs-content'
 export type TabType = 'local' | 'multi-country'
 interface IOption {
   label: string
   value: TabType
 }
-const areasData: IOption[] = [
+const tabBtnsData: IOption[] = [
   { label: 'Local eSIM', value: 'local' },
   { label: 'Multicountry eSIM', value: 'multi-country' },
 ]
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState<TabType>('local')
   const tabContentRef = useRef<HTMLDivElement | null>(null)
-  useEffect(() => {
+  // useEffect(() => {
+
+  // }, [activeTab])
+  const scrollToTabContent = () => {
     if (tabContentRef.current) {
       window.scrollBy({
         top: tabContentRef.current.getBoundingClientRect().top - 100,
@@ -22,12 +25,13 @@ const Tabs = () => {
         behavior: 'smooth',
       })
     }
-  }, [activeTab])
-  const renderTabButtons = areasData.map((area, idx) => {
+  }
+  const renderTabButtons = tabBtnsData.map((singleBtn, idx) => {
     const onClick = () => {
-      setActiveTab(area.value)
+      scrollToTabContent()
+      setActiveTab(singleBtn.value)
     }
-    const activeClass = area.value === activeTab ? 'active' : ''
+    const activeClass = singleBtn.value === activeTab ? 'active' : ''
     return (
       <div
         key={idx}
@@ -37,15 +41,15 @@ const Tabs = () => {
           activeClass,
         )}
       >
-        <span>{area.label}</span>
+        <span>{singleBtn.label}</span>
       </div>
     )
   })
-  const renderTabButtonsMobile = areasData.map((area, idx) => {
+  const renderTabButtonsMobile = tabBtnsData.map((singleBtn, idx) => {
     const onClick = () => {
-      setActiveTab(area.value)
+      setActiveTab(singleBtn.value)
     }
-    const activeClass = area.value === activeTab ? 'active' : ''
+    const activeClass = singleBtn.value === activeTab ? 'active' : ''
     return (
       <div
         key={idx}
@@ -55,7 +59,7 @@ const Tabs = () => {
           activeClass,
         )}
       >
-        <span>{area.label}</span>
+        <span>{singleBtn.label}</span>
       </div>
     )
   })
