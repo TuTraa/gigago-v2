@@ -1,7 +1,7 @@
 'use client'
 // import { cn } from '@/utils/cn'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import { ChevronRight } from 'lucide-react'
 // const areasData = [
 //   {
