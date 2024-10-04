@@ -16,3 +16,11 @@ export interface IArea {
   title: string
   countries: ICountry[]
 }
+export type TypeBrand = 'apple' | 'samsung' | 'google-pixel' | 'others'
+export interface IDevice {
+  name: string
+}
+export interface IBrandDevice {
+  brand: TypeBrand
+  devices: IDevice[]
+}
