@@ -1,5 +1,5 @@
 import React from 'react'
-import Tabs from '../listing/tabs'
+import Tabs from '../../components/tabs/tabs-mix'
 
 const ESIMOptionsSection = () => {
   return (
