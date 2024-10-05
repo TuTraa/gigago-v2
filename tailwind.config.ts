@@ -20,6 +20,8 @@ const config: Config = {
       backgroundImage: {
         'background-hero': 'url(/assets/images/bg-hero.webp)',
         'background-benefit': 'url(/assets/images/bg-benefit.webp)',
+        'background-device': 'url(/assets/images/bg-device-section.webp)',
+        'background-download': 'url(/assets/images/bg-download.jpg)',
       },
       colors: {
         primary: '#4600B9',
@@ -39,8 +41,45 @@ const config: Config = {
         lg: '12px',
         xl: '16px',
       },
-      keyframes: {},
-      animation: {},
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+        'slide-up': {
+          from: { opacity: '0', transform: 'translateY(30px)' },
+          to: { opacity: '1', transform: 'translateY(0px)' },
+        },
+        'slide-down': {
+          from: { opacity: '1', transform: 'translateY(0px)' },
+          to: { opacity: '0', transform: 'translateY(30px)' },
+        },
+        'zoom-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(.3)',
+          },
+          '60%': {
+            opacity: '1',
+            transform: 'scale(1.1)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1)',
+          },
+        },
+      },
+      animation: {
+        'zoom-in': 'zoom-in 0.6s ease-in-out',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'slide-up': 'slide-up 0.5s linear',
+        'slide-down': 'slide-down 0.5s linear',
+      },
       fontSize: {
         sm: '12px',
         md: '14px',

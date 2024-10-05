@@ -14,7 +14,7 @@ const areasData = [
   { label: 'Africa', value: 5 },
   { label: 'Oceania', value: 6 },
 ]
-const NavigationDesktopTabVariant = () => {
+const NavigationDropTabDesktop = () => {
   const [activeTab, setActiveTab] = useState(1)
   const renderTabButtons = areasData.map((area, idx) => {
     const onClick = () => {
@@ -73,4 +73,4 @@ const NavigationDesktopTabVariant = () => {
   )
 }
 
-export default NavigationDesktopTabVariant
+export default NavigationDropTabDesktop

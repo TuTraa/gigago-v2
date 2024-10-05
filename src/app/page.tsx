@@ -2,6 +2,7 @@ import AreaSection from '@/views/home-page/area-section'
 import AskedQuestionsSection from '@/views/home-page/asked-questions-section'
 import BenefitsSection from '@/views/home-page/benefits-section'
 import DeviceCompatibilitySection from '@/views/home-page/device-compatibility-section'
+import DownloadMethodSection from '@/views/home-page/download-method-section'
 import FeedbackSection from '@/views/home-page/feedback-section'
 import HeroSection from '@/views/home-page/hero-section.tsx'
 import IntroduceSection from '@/views/home-page/introduce-section'
@@ -18,6 +19,7 @@ export default function Home() {
       <DeviceCompatibilitySection />
       <FeedbackSection />
       <AskedQuestionsSection />
+      <DownloadMethodSection />
     </div>
   )
 }

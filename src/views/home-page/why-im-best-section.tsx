@@ -4,7 +4,7 @@ const WhyImBestSection = () => {
   return (
     <div className='pt-[80px]'>
       <div className='max-w-xl md:max-w-[1230px] w-full mx-auto px-[15px] bg-[linear-gradient(to_bottom,_#FAF3FF_40%,_#B0A1FC)] md:bg-[rgb(245,_245,_248)]  rounded-xl'>
-        <div className='px-[15px] py-[70px] '>
+        <div className='px-[15px] py-[70px]'>
           <div className='flex flex-col md:flex-row items-center gap-x-[30px]'>
             <div className='w-full md:w-1/2 '>
               <h2 className='text-[34px] text-center md:text-left font-semibold mb-[16px] md:max-w-[490px] leading-[1.17]'>

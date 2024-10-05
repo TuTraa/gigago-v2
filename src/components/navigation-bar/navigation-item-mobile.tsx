@@ -13,20 +13,18 @@ const NavigationItemMobile = ({
     singleMenuItem.subListMenu.length > 0 || singleMenuItem.isSubTabMenu
 
   return (
-    <Link
-      href={singleMenuItem.href || '#'}
-      className={`w-full h-full px-0  py-[15px] inline-flex items-center justify-between font-medium text-[20px] text-[#404963]`}
+    <div
+      className={`relative w-full h-full px-0  py-[15px] inline-flex items-center justify-between font-medium text-[20px] text-[#404963]`}
     >
-      {singleMenuItem.text}
+      <Link href={singleMenuItem.href || '#'} className='block flex-1'>
+        {singleMenuItem.text}
+      </Link>
       {isCouldExpand && (
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className='size-[32px] flex items-center justify-center'
-        >
+        <div className='size-[32px] flex items-center justify-center'>
           <ChevronDown className='ml-[2px] size-[26px]  text-[#404963]  rotate-[-90deg]' />
         </div>
       )}
-    </Link>
+    </div>
   )
 }
 

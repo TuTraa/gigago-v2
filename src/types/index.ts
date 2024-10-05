@@ -22,5 +22,22 @@ export interface IDevice {
 }
 export interface IBrandDevice {
   brand: TypeBrand
+  image: string
+  descriptions: string[]
   devices: IDevice[]
+}
+
+export interface IQuestion {
+  title: string
+  description: string
+}
+
+export interface IChildAreaMobile {
+  text: string
+  href: string
+}
+
+export interface IAreaMobile {
+  text: string
+  childrens: IChildAreaMobile[]
 }

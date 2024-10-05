@@ -1,6 +1,8 @@
 'use client'
 import { cn } from '@/utils/cn'
 import React, { useRef, useState } from 'react'
+import TabsHorizontalContent from './tabs-horizontal-content'
+
 type TabDevice = 'apple' | 'samsung' | 'google-pixel' | 'others'
 interface ITabBtnDevice {
   label: string
@@ -25,7 +27,7 @@ const TabsHorizontal = () => {
         key={idx}
         onClick={onClick}
         className={cn(
-          `tabBtnDevice__mobile w-fit py-[12px] text-[24px] font-semibold text-black/85 hover:text-black text-nowrap cursor-pointer`,
+          `tabBtnDevice w-fit py-[14px] text-[18px] md:text-[24px] leading-[1.17] font-semibold text-black/85 hover:text-black text-nowrap cursor-pointer`,
           activeClass,
         )}
       >
@@ -35,12 +37,20 @@ const TabsHorizontal = () => {
   })
   return (
     <div ref={tabSectionRef}>
-      <div className='flex flex-col md:flex-row w-full'>
+      <div className='flex flex-col w-full'>
         <div className='groupTabDevice__desktop'>{renderTabButtons}</div>
-        <div className='flex-1'>
-          {/* {activeTab === 'apple' && <TabsContent typeESIM={'local'} />}
-          {activeTab === 'Samsung' && (
-            <TabsContent typeESIM={'multi-country'} />
+        <div className='pt-[16px] '>
+          {activeTab === 'apple' && <TabsHorizontalContent brand={'apple'} />}
+          {activeTab === 'samsung' && (
+            <TabsHorizontalContent brand={'samsung'} />
+          )}
+          {activeTab === 'google-pixel' && (
+            <TabsHorizontalContent brand={'google-pixel'} />
+          )}
+          {activeTab === 'others' && <TabsHorizontalContent brand={'others'} />}
+
+          {/* {activeTab === 'samsung' && (
+            <TabsHorizontalContent typeESIM={'samsung'} />
           )} */}
         </div>
       </div>

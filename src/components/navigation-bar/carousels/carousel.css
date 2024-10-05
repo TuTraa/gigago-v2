@@ -1,0 +1,19 @@
+.mySwiper #containerForBullets {
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+  padding-top: 15px;
+}
+.mySwiper .swiper-custom-bullet {
+  display: block;
+  height: 12px;
+  width: 12px;
+  background-color: #111;
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+.mySwiper .swiper-custom-bullet.swiper-custom-bullet-active {
+  background-color: #111;
+  opacity: 1;
+}
