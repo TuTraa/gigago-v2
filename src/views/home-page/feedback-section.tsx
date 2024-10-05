@@ -1,4 +1,4 @@
-import FeedbackCarousel from '@/components/navigation-bar/carousels/feedback-carousel'
+import FeedbackCarousel from '@/components/carousels/feedback-carousel'
 import TrustPilot from '@/components/trust-pilot'
 import React from 'react'
 

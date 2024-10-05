@@ -1,8 +1,8 @@
 import { cn } from '@/utils/cn'
 import React from 'react'
 import Image from 'next/image'
-import SearchBoxHero from '@/components/search-box-hero'
 import Link from 'next/link'
+import SearchBox from '@/components/search-box'
 const HeroSection = ({ className }: { className?: string }) => {
   return (
     <div
@@ -16,7 +16,7 @@ const HeroSection = ({ className }: { className?: string }) => {
           <h1 className='max-w-[515px] mb-[20px] text-[27px] sm:text-[35px] md:text-[43px] leading-snug font-semibold text-wrap'>
             <span>Stay Connected Anytime and Anywhere</span>
           </h1>
-          <SearchBoxHero />
+          <SearchBox />
           <Link href='' className='block mt-[20px] underline text-primary'>
             Can my phone use eSIM?
           </Link>
