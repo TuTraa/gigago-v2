@@ -41,3 +41,14 @@ export interface IAreaMobile {
   text: string
   childrens: IChildAreaMobile[]
 }
+
+export interface Day {
+  id: string
+  name: string
+  value: string
+}
+export interface Data {
+  id: string
+  name: string
+  value: string
+}

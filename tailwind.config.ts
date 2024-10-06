@@ -72,6 +72,18 @@ const config: Config = {
             transform: 'scale(1)',
           },
         },
+        'drop-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0)',
+            animationTimingFunction: 'cubic-bezier(0.34, 1.61, 0.7, 1)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1)',
+            animationTimingFunction: 'cubic-bezier(0.34, 1.61, 0.7, 1)',
+          },
+        },
       },
       animation: {
         'zoom-in': 'zoom-in 0.6s ease-in-out',
@@ -79,6 +91,7 @@ const config: Config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'slide-up': 'slide-up 0.5s linear',
         'slide-down': 'slide-down 0.5s linear',
+        'drop-in': 'drop-in 0.3s ease-in-out 1',
       },
       fontSize: {
         sm: '12px',
