@@ -106,7 +106,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={` ${inter.className} antialiased h-full`}>
+      <body className={` ${inter.className} antialiased scrollbar`}>
         <Script
           id='mobileMenuLogic'
           strategy='beforeInteractive'

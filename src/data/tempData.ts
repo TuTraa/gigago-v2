@@ -1,4 +1,4 @@
-import { IArea, IBrandDevice, IQuestion } from '@/types'
+import { IArea, IBrandDevice, IPost, IQuestion } from '@/types'
 
 export const localAreasData: IArea[] = [
   {
@@ -197,5 +197,68 @@ export const askedQuestionsData: IQuestion[] = [
     title: 'What should I do if I remove or lose my eSIM QR code?',
     description:
       'If you have not installed the eSIM on your device, you can get the QR code back by contacting our 24/7 customer support team at hello@gigago.com or our online chat. We will resend the QR code.',
+  },
+]
+
+export const blogData: IPost[] = [
+  {
+    title: 'Las Vegas Airport WiFi',
+    description:
+      'Las Vegas Airport WiFi (Harry Reid International Airport) provides travelers with a convenient',
+    urlImage:
+      'https://gigago.com/wp-content/uploads/2024/10/airport-wifi-2.jpg',
+    imageBlurhash: 'LFK_ziM}EBW=00xU?FxppyRj9#jY',
+    postedUser: '@holiday_travel',
+    datePosted: 'October 2022',
+  },
+  {
+    title: '(DEL) Indira Gandhi Airport WiFi',
+    description:
+      'This guide provides information on different WiFi options, safety tips, and where to find',
+    urlImage:
+      'https://gigago.com/wp-content/uploads/2024/10/airport-wifi-1.jpg',
+    imageBlurhash: 'LsJIO%.TNND+%KxBn#xuxvM|WEay',
+    postedUser: '@ultimateguides',
+    datePosted: 'October 2024',
+  },
+  {
+    title: 'Does eSIM Use More Battery?',
+    description:
+      'eSIMs do not use more battery than physical SIM cards, but there are myths and',
+    urlImage:
+      'https://gigago.com/wp-content/uploads/2024/10/does-esim-use-more-battery.png',
+    imageBlurhash: 'LVONwk.8X8DjVXXnt4Mx~SENoJs:',
+    postedUser: '@tech_and_mobile',
+    datePosted: 'October 2024',
+  },
+  {
+    title: 'Changi Airport WiFi (SIN)',
+    description:
+      'This guide will walk you through easy options to purchase an affordable prepaid SIM card',
+    urlImage:
+      'https://gigago.com/wp-content/uploads/2024/10/vilnius-airport-vno-sim-card-67033a8c96f56.jpg',
+    imageBlurhash: 'LpKecs_4N}4pxs$|s+t6R:NJafWD',
+    postedUser: 'Rachel Tran',
+    datePosted: 'October 2024',
+  },
+  {
+    title: 'Prepaid Iraq SIM Card for Tourists',
+    description:
+      'Find out how to connect Changi Airport WiFi for FREE and alternative connectivity options to ',
+    urlImage:
+      'https://gigago.com/wp-content/uploads/2024/10/changi-airport-wifi-singapore.jpg',
+    imageBlurhash: 'LHL#*E0E0q~2I^WV-h?DIwxCs,WF',
+    postedUser: 'William Jones',
+    datePosted: 'October 2024',
+  },
+  {
+    title: 'Guide to Buy a SIM Card at Vilnius Airport (VNO)',
+    description:
+      'Everything you need to buy prepaid Iraqi SIM cards is available in this guide, including',
+    urlImage:
+      'https://gigago.com/wp-content/uploads/2024/10/iraq-sim-card-66ff45606c4ae.jpg',
+    imageBlurhash: 'LOOg+].RX9DiMwkYxYIU_JM#slS}',
+    postedUser: 'Oliria Brown',
+    datePosted: 'October 2024',
   },
 ]

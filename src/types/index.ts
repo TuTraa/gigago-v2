@@ -52,3 +52,12 @@ export interface Data {
   name: string
   value: string
 }
+
+export interface IPost {
+  title: string
+  description: string
+  urlImage: string
+  imageBlurhash: string
+  postedUser: string
+  datePosted: string
+}
