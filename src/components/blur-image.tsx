@@ -11,7 +11,7 @@ const BlurImage = (props: ComponentProps<typeof Image>) => {
       alt={props.alt}
       className={cn(
         props.className,
-        'duration-700 ease-in-out',
+        'duration-700 linear',
         isLoading ? 'scale-105 blur-lg' : 'scale-100 blur-0',
       )}
       onLoad={() => setLoading(false)}

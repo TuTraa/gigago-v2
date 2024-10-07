@@ -14,6 +14,8 @@ import FeedbackSection from '@/views/home-page/feedback-section'
 import AskedQuestionsSection from '@/views/home-page/asked-questions-section'
 import TutorialGetInfoSection from '@/views/product/tutorial-get-info-section'
 import HowToUseSection from '@/views/product/how-to-use-section'
+import BlurImage from '@/components/blur-image'
+import { placeholderBlurhash } from '@/utils/placeholderBlurhash'
 const items = {
   Home: '/',
   'Buy eSIM': '/buy-esim',
@@ -33,13 +35,17 @@ const EsimPage = () => {
         <div className='max-w-xl w-full mx-auto px-[15px]'>
           <div className='flex gap-x-[30px]'>
             <div className='max-w-[380px] w-full'>
-              <Image
-                src='/assets/images/detail-sim.webp'
-                alt=''
-                width={510}
-                height={510}
-                className='sticky top-[150px] size-[331px] rounded-lg'
-              />
+              <div className='sticky top-[150px] overflow-hidden w-fit rounded-[16px] bg-white shadow-md transition-all duration-200 group-hover:shadow-xl'>
+                <BlurImage
+                  src={'/assets/images/detail-sim.webp'}
+                  alt={'Blog Post'}
+                  width={510}
+                  height={510}
+                  className='size-[331px]'
+                  placeholder='blur'
+                  blurDataURL={placeholderBlurhash}
+                />
+              </div>
             </div>
             <div className='flex-1 min-h-[1000px]'>
               <RightSection>
