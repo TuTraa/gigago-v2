@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-html {
-  height: 100%;
-  overflow: auto;
-}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -16,16 +9,22 @@ html {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
-
+html {
+  padding-right: 0px !important;
+  height: 100%;
+  overflow: auto;
+}
 @layer base {
   :root {
     --radius: 0.5rem;
+  }
+  * {
+    box-sizing: border-box;
   }
 }
 

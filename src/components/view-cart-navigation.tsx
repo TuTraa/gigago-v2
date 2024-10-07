@@ -10,16 +10,33 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer'
 import { X } from 'lucide-react'
+import { useCartStore } from '@/stores/use-cart-store'
+import CartItem from '@/views/cart/cart-item'
+import Button from './ui/button'
 const ViewCartNavigation = () => {
+  const totalItems = useCartStore((state) => state.totalItems)
   const [isOpen, setIsOpen] = useState(false)
-  const onClose = () => {
+  const onCartClose = () => {
     setIsOpen(false)
   }
+  // useEffect(() => {
+  //   if (isOpen === false) {
+  //     document.body.style.overflow = 'scroll'
+  //     document.body.style.maxHeight = '100%'
+  //   } else {
+  //   }
+  // }, [isOpen])
   return (
     <div>
       <Drawer direction='right' open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger asChild>
-          <div className='flex items-center justify-center size-[26px]'>
+          <div className='relative flex items-center justify-center size-[26px]'>
+            {
+              <span className='absolute -top-[8px] -right-[8px] size-[16px] rounded-full bg-[#0094ff] flex items-center justify-center text-white text-[10px] shadow-md'>
+                {totalItems || 0}
+              </span>
+            }
+
             <Image
               src='/assets/images/cart_gigago.svg'
               width={24}
@@ -29,23 +46,29 @@ const ViewCartNavigation = () => {
             />
           </div>
         </DrawerTrigger>
-        <DrawerContent className='h-screen w-[300px] md:w-[500px] fixed top-0 right-0'>
-          <div className=''>
-            <DrawerHeader className='flex items-center justify-between px-[30px] py-[25px]'>
-              <DrawerTitle className='text-[24px]'>My cart</DrawerTitle>
-              <div
-                onClick={onClose}
-                className='size-[34px] flex items-center justify-center rounded-md hover:bg-gray-100 duration-100 cursor-pointer'
-              >
-                <X className='size-[24px]' />
-              </div>
-            </DrawerHeader>
-            <div className='p-4 pb-0'>
-              <div className='flex items-center justify-center space-x-2'></div>
-              <div className='mt-3 h-[120px]'></div>
+        <DrawerContent className='h-screen w-[300px] md:w-[480px] fixed top-0 right-0'>
+          <DrawerHeader className='flex items-center justify-between px-[30px] py-[25px] border-b-[1px] border-gray-100'>
+            <DrawerTitle className='text-[24px]'>My cart</DrawerTitle>
+            <div
+              onClick={onCartClose}
+              className='size-[34px] flex items-center justify-center rounded-md hover:bg-gray-100 duration-100 cursor-pointer'
+            >
+              <X className='size-[24px]' />
             </div>
-            <DrawerFooter></DrawerFooter>
+          </DrawerHeader>
+          <div className='flex-1 max-h-full overflow-y-scroll p-4 flex flex-col gap-y-[16px]'>
+            <CartItem onProductClick={() => onCartClose()} />
+            <CartItem onProductClick={() => onCartClose()} />
+            <CartItem onProductClick={() => onCartClose()} />
+            <CartItem onProductClick={() => onCartClose()} />
+            <CartItem onProductClick={() => onCartClose()} />
           </div>
+          <DrawerFooter>
+            <div className='flex flex-col gap-y-[12px]'>
+              <Button>View Cart</Button>
+              <Button>View Cart</Button>
+            </div>
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </div>
@@ -53,58 +76,3 @@ const ViewCartNavigation = () => {
 }
 
 export default ViewCartNavigation
-
-// Dùng cho chi tiết hoặc giỏ hàng tăng giảm số lượng
-{
-  /* <Button
-variant='outline'
-size='icon'
-className='h-8 w-8 shrink-0 rounded-full'
-onClick={() => onClick(-10)}
-disabled={goal <= 200}
->
-<Minus className='h-4 w-4' />
-<span className='sr-only'>Decrease</span>
-</Button>
-<div className='flex-1 text-center'>
-<div className='text-7xl font-bold tracking-tighter'>
-  {goal}
-</div>
-<div className='text-[0.70rem] uppercase text-muted-foreground'>
-  Calories/day
-</div>
-</div>
-<Button
-variant='outline'
-size='icon'
-className='h-8 w-8 shrink-0 rounded-full'
-onClick={() => onClick(10)}
-disabled={goal >= 400}
->
-<Plus className='h-4 w-4' />
-<span className='sr-only'>Increase</span>
-</Button> */
-}
-
-{
-  /* <ResponsiveContainer width='100%' height='100%'>
-                  <BarChart data={data}>
-                    <Bar
-                      dataKey='goal'
-                      style={
-                        {
-                          fill: 'hsl(var(--foreground))',
-                          opacity: 0.9,
-                        } as React.CSSProperties
-                      }
-                    />
-                  </BarChart>
-                </ResponsiveContainer> */
-}
-
-{
-  /* <Button>Submit</Button>
-              <DrawerClose asChild>
-                <Button variant='outline'>Cancel</Button>
-              // </DrawerClose> */
-}

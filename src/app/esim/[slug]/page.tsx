@@ -10,6 +10,10 @@ import SimilarProductsSection from '@/views/product/similar-product-section'
 import ProductOverview from '@/views/product/product-overview'
 import Description from '@/views/product/description'
 import AdvantagesSection from '@/views/product/advantages-section'
+import FeedbackSection from '@/views/home-page/feedback-section'
+import AskedQuestionsSection from '@/views/home-page/asked-questions-section'
+import TutorialGetInfoSection from '@/views/product/tutorial-get-info-section'
+import HowToUseSection from '@/views/product/how-to-use-section'
 const items = {
   Home: '/',
   'Buy eSIM': '/buy-esim',
@@ -17,82 +21,88 @@ const items = {
 }
 const EsimPage = () => {
   return (
-    <div className='max-w-xl w-full mx-auto px-[15px]'>
-      <div className='grid grid-cols-12 pb-[60px]'>
-        <div className='col-span-12'>
+    <div className='grid grid-cols-12 pb-[120px]'>
+      <div className='col-span-12 '>
+        <div className='max-w-xl w-full mx-auto px-[15px]'>
           <div className='flex items-center justify-start min-h-[65px] '>
             <Breadcrumbs items={items} className='' />
           </div>
         </div>
-        <div className='col-span-12 flex gap-x-[30px]'>
-          <div className='max-w-[380px] w-full'>
-            <Image
-              src='/assets/images/detail-sim.webp'
-              alt=''
-              width={510}
-              height={510}
-              className='sticky top-[150px] size-[331px] rounded-lg'
-            />
-          </div>
-          <div className='flex-1 min-h-[1000px]'>
-            <RightSection>
-              <div className='mb-[24px]'>
-                <ProductTitle title='Taiwan eSIM' />
-              </div>
-              <div className='mb-[24px]'>
-                <Description
-                  descriptions={{
-                    data: '3GB – 20GB or daily 1GB-2GB',
-                    validity: '5, 7, 15, 30 days',
-                    coverage: 'Taiwan',
-                    mobileNetworkOperator: 'CHT',
-                    esimPhoneNumber: 'No',
-                    delivery: 'Instant via email',
-                    validityStart:
-                      'After installation. It’s recommended to install eSIM 1 day before departure',
-                    hotspotTethering: 'Yes',
-                    topUpOption: 'Not available',
-                  }}
-                />
-              </div>
-              <p className='text-primary text-[24px] font-bold mb-[24px]'>
-                $4.00 – $57.00 <span className='text-[12px]'>USD</span>
-              </p>
-              <div className='mb-[36px]'>
-                <VariantsDesktop />
-              </div>
-              <div className='flex items-center gap-x-[18px] mb-[24px]'>
-                <NumberStepper />
-                <AddToCart />
-              </div>
-              <div className='flex items-center mb-[36px]'>
-                <ShieldCheck className='size-[22px]' />
-                <p className='text-normal text-[#0c1941] ml-[12px] mr-[16px]'>
-                  Secure payment guaranteed
+      </div>
+      <div className='col-span-12'>
+        <div className='max-w-xl w-full mx-auto px-[15px]'>
+          <div className='flex gap-x-[30px]'>
+            <div className='max-w-[380px] w-full'>
+              <Image
+                src='/assets/images/detail-sim.webp'
+                alt=''
+                width={510}
+                height={510}
+                className='sticky top-[150px] size-[331px] rounded-lg'
+              />
+            </div>
+            <div className='flex-1 min-h-[1000px]'>
+              <RightSection>
+                <div className='mb-[24px]'>
+                  <ProductTitle title='Taiwan eSIM' />
+                </div>
+                <div className='mb-[24px]'>
+                  <Description
+                    descriptions={{
+                      data: '3GB – 20GB or daily 1GB-2GB',
+                      validity: '5, 7, 15, 30 days',
+                      coverage: 'Taiwan',
+                      mobileNetworkOperator: 'CHT',
+                      esimPhoneNumber: 'No',
+                      delivery: 'Instant via email',
+                      validityStart:
+                        'After installation. It’s recommended to install eSIM 1 day before departure',
+                      hotspotTethering: 'Yes',
+                      topUpOption: 'Not available',
+                    }}
+                  />
+                </div>
+                <p className='text-primary text-[24px] font-bold mb-[24px]'>
+                  $4.00 – $57.00 <span className='text-[12px]'>USD</span>
                 </p>
-                <Image
-                  src='/assets/images/payment-product.webp'
-                  alt='payment product'
-                  width={120}
-                  height={24}
-                  className=''
-                />
-              </div>
-              <div className=''>
-                <SimilarProductsSection
-                  items={[
-                    { country: 'Qatar', price: '$5' },
-                    { country: 'India', price: '$14.5' },
-                    { country: 'Mongolia', price: '$9.9' },
-                    { country: 'Maldives', price: '$44' },
-                    { country: 'Vietnam', price: '$8.9' },
-                  ]}
-                />
-              </div>
-            </RightSection>
+                <div className='mb-[36px]'>
+                  <VariantsDesktop />
+                </div>
+                <div className='flex items-center gap-x-[18px] mb-[24px]'>
+                  <NumberStepper />
+                  <AddToCart />
+                </div>
+                <div className='flex items-center mb-[36px]'>
+                  <ShieldCheck className='size-[22px]' />
+                  <p className='text-normal text-[#0c1941] ml-[12px] mr-[16px]'>
+                    Secure payment guaranteed
+                  </p>
+                  <Image
+                    src='/assets/images/payment-product.webp'
+                    alt='payment product'
+                    width={120}
+                    height={24}
+                    className=''
+                  />
+                </div>
+                <div className=''>
+                  <SimilarProductsSection
+                    items={[
+                      { country: 'Qatar', price: '$5' },
+                      { country: 'India', price: '$14.5' },
+                      { country: 'Mongolia', price: '$9.9' },
+                      { country: 'Maldives', price: '$44' },
+                      { country: 'Vietnam', price: '$8.9' },
+                    ]}
+                  />
+                </div>
+              </RightSection>
+            </div>
           </div>
         </div>
-        <div className='col-span-12 mt-[60px] mb-[120px]'>
+      </div>
+      <div className='col-span-12'>
+        <div className='max-w-xl w-full mx-auto px-[15px] mt-[60px] mb-[120px]'>
           <ProductOverview
             informations={{
               'Loại gói cước': 'Trả trước, Chỉ dữ liệu',
@@ -115,8 +125,33 @@ const EsimPage = () => {
             }}
           />
         </div>
-        <div className='col-span-12'>
+      </div>
+      <div className='col-span-12'>
+        <div className='max-w-xl w-full mx-auto px-[15px] mb-[70px]'>
           <AdvantagesSection />
+        </div>
+      </div>
+      <div className='col-span-12'>
+        <div className='bg-background-tutorial bg-center bg-no-repeat bg-cover mb-[120px]'>
+          <div className='max-w-xl w-full mx-auto px-[15px]'>
+            <TutorialGetInfoSection />
+          </div>
+        </div>
+      </div>
+      <div className='col-span-12'>
+        <div className='max-w-xl w-full mx-auto px-[15px] mb-[120px]'>
+          <HowToUseSection />
+        </div>
+      </div>
+
+      <div className='col-span-12'>
+        <div className='max-w-xl w-full mx-auto px-[15px] mb-[120px]'>
+          <FeedbackSection />
+        </div>
+      </div>
+      <div className='col-span-12'>
+        <div className='max-w-xl w-full mx-auto px-[15px]'>
+          <AskedQuestionsSection />
         </div>
       </div>
     </div>

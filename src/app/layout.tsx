@@ -106,11 +106,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={` ${inter.className} antialiased`}>
+      <body className={` ${inter.className} antialiased h-full`}>
         <Script
           id='mobileMenuLogic'
           strategy='beforeInteractive'
         >{`${mobileInlineScript}`}</Script>
+
         <TopBar />
         <NavigationBar items={navigationItems} />
         {children}

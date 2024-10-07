@@ -22,6 +22,7 @@ const config: Config = {
         'background-benefit': 'url(/assets/images/bg-benefit.webp)',
         'background-device': 'url(/assets/images/bg-device-section.webp)',
         'background-download': 'url(/assets/images/bg-download.jpg)',
+        'background-tutorial': 'url(/assets/images/bg-tutorial.webp)',
       },
       colors: {
         primary: '#4600B9',

@@ -10,16 +10,30 @@ import WhyImBestSection from '@/views/home-page/why-im-best-section'
 
 export default function Home() {
   return (
-    <div className='min-h-[1200px] flex w-full flex-col'>
+    <div className='flex w-full flex-col'>
       <HeroSection />
-      <IntroduceSection />
+      <div className='mt-[60px] md:mt-[120px]'>
+        <IntroduceSection />
+      </div>
       <AreaSection />
-      <BenefitsSection />
-      <WhyImBestSection />
-      <DeviceCompatibilitySection />
-      <FeedbackSection />
-      <AskedQuestionsSection />
-      <DownloadMethodSection />
+      <div className='mt-[40px] md:mt-[80px] '>
+        <BenefitsSection />
+      </div>
+      <div className='mt-[80px]'>
+        <WhyImBestSection />
+      </div>
+      <div className='mt-[80px] sm:mt-[120px]'>
+        <DeviceCompatibilitySection />
+      </div>
+      <div className='mt-[60px] md:mt-[120px]'>
+        <FeedbackSection />
+      </div>
+      <div className='mt-[60px] sm:mt-[120px]'>
+        <AskedQuestionsSection />
+      </div>
+      <div className='mt-[60px] sm:mt-[120px] mb-[56px]'>
+        <DownloadMethodSection />
+      </div>
     </div>
   )
 }

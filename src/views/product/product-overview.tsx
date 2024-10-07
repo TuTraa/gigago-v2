@@ -9,9 +9,9 @@ const ProductOverview = ({ informations }: ProductOverviewProps) => {
       <ul className='flex flex-col gap-y-[22.5px]'>
         {Object.entries(informations).map(([key, value], idx) => {
           return (
-            <li key={idx} className='flex items-center'>
+            <li key={idx} className='flex items-start'>
               <IoCheckmarkCircleSharp className='size-[24px] text-secondary' />
-              <p className='pl-[16px] text-[16px]'>
+              <p className='flex-1 pl-[16px] text-[16px]'>
                 <span className='font-bold capitalize'>{key + ':'}</span>{' '}
                 <span>{value}</span>
               </p>

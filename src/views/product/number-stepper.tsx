@@ -21,10 +21,11 @@ const NumberStepper = () => {
     const onChangeAmount = () => {
       if (debouncedQuantity) {
         const current = qs.parse(searchParams.toString())
-        const query = {
-          ...current,
-          a: debouncedQuantity,
-        }
+
+        const query =
+          debouncedQuantity === 1
+            ? current
+            : { ...current, a: debouncedQuantity }
 
         const url = qs.stringifyUrl(
           {
