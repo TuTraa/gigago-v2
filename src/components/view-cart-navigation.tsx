@@ -13,6 +13,7 @@ import { X } from 'lucide-react'
 import { useCartStore } from '@/stores/use-cart-store'
 import CartItem from '@/views/cart/cart-item'
 import Button from './ui/button'
+import Link from 'next/link'
 const ViewCartNavigation = () => {
   const totalItems = useCartStore((state) => state.totalItems)
   const [isOpen, setIsOpen] = useState(false)
@@ -39,7 +40,7 @@ const ViewCartNavigation = () => {
             />
           </div>
         </DrawerTrigger>
-        <DrawerContent className='h-screen w-[300px] md:w-[480px] fixed top-0 right-0'>
+        <DrawerContent className='h-screen w-[300px] md:w-[500px] fixed top-0 right-0 px-4'>
           <DrawerHeader className='flex items-center justify-between px-[30px] py-[25px] border-b-[1px] border-gray-100'>
             <DrawerTitle className='text-[24px]'>My cart</DrawerTitle>
             <div
@@ -53,13 +54,21 @@ const ViewCartNavigation = () => {
             <CartItem onProductClick={() => onCartClose()} />
             <CartItem onProductClick={() => onCartClose()} />
             <CartItem onProductClick={() => onCartClose()} />
-            <CartItem onProductClick={() => onCartClose()} />
-            <CartItem onProductClick={() => onCartClose()} />
           </div>
           <DrawerFooter>
-            <div className='flex flex-col gap-y-[12px]'>
-              <Button>View Cart</Button>
-              <Button>View Cart</Button>
+            <div className='flex flex-col gap-y-[16px] py-4'>
+              <Link href='/cart'>
+                <Button className='w-full bg-gray-100 text-primary hover:text-white hover:bg-primary duration-300 rounded-[25px]'>
+                  {' '}
+                  View Cart
+                </Button>
+              </Link>
+              <Link href='/checkout'>
+                <Button className='w-full bg-primary text-white rounded-[25px]'>
+                  {' '}
+                  Checkout
+                </Button>
+              </Link>
             </div>
           </DrawerFooter>
         </DrawerContent>
