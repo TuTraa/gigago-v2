@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/drawer'
 import { X } from 'lucide-react'
 import { useCartStore } from '@/stores/use-cart-store'
-import CartItem from '@/views/cart/cart-item'
+import CartItemDrawer from '@/views/cart/cart-item-drawer'
 import Button from './ui/button'
 import Link from 'next/link'
 const ViewCartNavigation = () => {
@@ -30,7 +30,6 @@ const ViewCartNavigation = () => {
                 {totalItems || 0}
               </span>
             }
-
             <Image
               src='/assets/images/cart_gigago.svg'
               width={24}
@@ -51,9 +50,9 @@ const ViewCartNavigation = () => {
             </div>
           </DrawerHeader>
           <div className='flex-1 max-h-full overflow-y-scroll scrollbar p-4 flex flex-col gap-y-[16px]'>
-            <CartItem onProductClick={() => onCartClose()} />
-            <CartItem onProductClick={() => onCartClose()} />
-            <CartItem onProductClick={() => onCartClose()} />
+            <CartItemDrawer onProductClick={() => onCartClose()} />
+            <CartItemDrawer onProductClick={() => onCartClose()} />
+            <CartItemDrawer onProductClick={() => onCartClose()} />
           </div>
           <DrawerFooter>
             <div className='flex flex-col gap-y-[16px] py-4'>
