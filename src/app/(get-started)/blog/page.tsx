@@ -32,7 +32,11 @@ const BlogPage = async () => {
         <div className='max-w-xl w-full mx-auto px-[15px]'>
           <div className='-mt-[120px] grid grid-cols-6 gap-x-[40px] gap-y-[40px]'>
             {blogs.map((blog, idx) => (
-              <BlogCard key={idx} data={blog} className='col-span-2' />
+              <BlogCard
+                key={idx}
+                data={blog}
+                className='col-span-6 md:col-span-2'
+              />
             ))}
           </div>
         </div>
