@@ -6,7 +6,7 @@ const TutorialGetInfoSection = () => {
     <div className='min-h-[616px] flex items-center'>
       <div className='flex flex-col md:flex-row items-center gap-x-[30px] align-middle'>
         <div className='w-full md:max-w-1/2'>
-          <h2 className='text-[34px] text-center md:text-left font-semibold mb-[50px] md:max-w-[490px] leading-[1.17]'>
+          <h2 className='text-[34px] text-center md:text-left font-semibold mb-[30px] sm:mb-[50px] md:max-w-[490px] leading-[1.17]'>
             Receive eSIM information by email
           </h2>
           <p className='text-normal mb-[10px] text-center md:text-left'>

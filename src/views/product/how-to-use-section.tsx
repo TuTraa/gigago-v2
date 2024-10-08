@@ -8,8 +8,8 @@ const HowToUseSection = () => {
       <h3 className='text-[28px] sm:text-[34px] leading-[1.17] font-semibold text-center mb-[60px]'>
         How to use Taiwan eSIM
       </h3>
-      <div className='grid grid-cols-12 md:gap-x-[30px] md:gap-y-[30px]'>
-        <div className='col-span-4 flex flex-col items-center px-[10px]'>
+      <div className='grid grid-cols-12 gap-x-[30px] gap-y-[50px] sm:gap-y-[30px]'>
+        <div className='col-span-12 sm:col-span-4 flex flex-col items-center px-[10px]'>
           <Image
             src='/assets/images/use-1.svg'
             width={60}
@@ -28,7 +28,7 @@ const HowToUseSection = () => {
             Check if your phone works with eSIM
           </Link>
         </div>
-        <div className='col-span-4 flex flex-col items-center px-[10px]'>
+        <div className='col-span-12 sm:col-span-4 flex flex-col items-center px-[10px]'>
           <Image
             src='/assets/images/use-2.svg'
             width={60}
@@ -44,7 +44,7 @@ const HowToUseSection = () => {
             cellular network. So, you can buy and install it before departure.
           </p>
         </div>
-        <div className='col-span-4 flex flex-col items-center px-[10px]'>
+        <div className='col-span-12 sm:col-span-4 flex flex-col items-center px-[10px]'>
           <Image
             src='/assets/images/use-3.svg'
             width={60}

@@ -22,7 +22,7 @@ const BlogPage = async () => {
             <h1 className='font-semibold text-[34px] text-center '>
               Welcome to <span className='text-primary'>Gigago Blog</span>
             </h1>
-            <p className='text-[18px] text-center mt-[15px] mb-[10px]'>
+            <p className='text-[18px] text-center text-[#0c1941] mt-[8px] mb-[10px]'>
               Your helpful resources for amazing journeys
             </p>
           </div>
@@ -30,7 +30,7 @@ const BlogPage = async () => {
       </div>
       <div className='col-span-12'>
         <div className='max-w-xl w-full mx-auto px-[15px]'>
-          <div className='-mt-[80px] grid grid-cols-6 gap-x-[40px] gap-y-[40px]'>
+          <div className='-mt-[120px] grid grid-cols-6 gap-x-[40px] gap-y-[40px]'>
             {blogs.map((blog, idx) => (
               <BlogCard key={idx} data={blog} className='col-span-2' />
             ))}

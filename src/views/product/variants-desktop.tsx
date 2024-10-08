@@ -22,7 +22,7 @@ const VariantsDesktop = () => {
       {
         <button
           onClick={clearParams}
-          className={`absolute top-[5px] right-[85px] w-fit h-auto flex items-center hover:underline ${isHaveSearchParams ? 'animate-drop-in' : 'scale-0 opacity-0'} duration-300`}
+          className={`absolute top-[5px] right-0 sm:right-[85px] w-fit h-auto flex items-center hover:underline ${isHaveSearchParams ? 'animate-drop-in' : 'scale-0 opacity-0'} duration-300`}
         >
           <X className='size-[20px] text-gray-400 mr-[4px]' />
           <span className='text-primary font-semibold'>Clear</span>
