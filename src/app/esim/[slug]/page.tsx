@@ -23,7 +23,7 @@ const items = {
 }
 const EsimPage = () => {
   return (
-    <div className='grid grid-cols-12 pb-[120px]'>
+    <div className='grid grid-cols-12 pb-[60px] sm:pb-[120px]'>
       <div className='col-span-12 '>
         <div className='max-w-xl w-full mx-auto px-[15px]'>
           <div className='flex items-center justify-start min-h-[65px] '>
@@ -33,15 +33,15 @@ const EsimPage = () => {
       </div>
       <div className='col-span-12'>
         <div className='max-w-xl w-full mx-auto px-[15px]'>
-          <div className='flex gap-x-[30px]'>
-            <div className='max-w-[380px] w-full'>
-              <div className='sticky top-[150px] overflow-hidden w-fit rounded-[16px] bg-white shadow-md transition-all duration-200 group-hover:shadow-xl'>
+          <div className='flex flex-col md:flex-row gap-x-[30px] gap-y-[18px] sm:gap-y-[30px]'>
+            <div className='max-w-full md:max-w-[380px] w-full'>
+              <div className='sticky top-[150px] overflow-hidden w-full md:w-fit rounded-[16px] bg-white shadow-md transition-all duration-200 group-hover:shadow-xl'>
                 <BlurImage
                   src={'/assets/images/detail-sim.webp'}
                   alt={'Blog Post'}
                   width={510}
                   height={510}
-                  className='size-[331px]'
+                  className='size-full md:size-[331px] '
                   placeholder='blur'
                   blurDataURL={placeholderBlurhash}
                 />
@@ -49,7 +49,7 @@ const EsimPage = () => {
             </div>
             <div className='flex-1 min-h-[1000px]'>
               <RightSection>
-                <div className='mb-[24px]'>
+                <div className='mb-[16px] sm:mb-[24px]'>
                   <ProductTitle title='Taiwan eSIM' />
                 </div>
                 <div className='mb-[24px]'>
@@ -74,13 +74,13 @@ const EsimPage = () => {
                 <div className='mb-[36px]'>
                   <VariantsDesktop />
                 </div>
-                <div className='flex items-center gap-x-[18px] mb-[24px]'>
+                <div className='sticky bottom-0 left-0 w-full sm:relative flex items-center bg-white gap-x-[12px] sm:gap-x-[18px] mb-[24px] py-4 md:py-0 '>
                   <NumberStepper />
-                  <AddToCart />
+                  <AddToCart className='flex-1 sm:flex-none text-[14px] sm:text-normal normal-case sm:uppercase text-nowrap' />
                 </div>
-                <div className='flex items-center mb-[36px]'>
-                  <ShieldCheck className='size-[22px]' />
-                  <p className='text-normal text-[#0c1941] ml-[12px] mr-[16px]'>
+                <div className='flex items-center  justify-center sm:justify-start sm:items-center flex-wrap gap-y-2 mb-[36px]'>
+                  <ShieldCheck className='size-[18px] sm:size-[22px]' />
+                  <p className='text-[14px] sm:text-normal text-[#0c1941] ml-[8px] sm:ml-[12px] mr-[16px] block'>
                     Secure payment guaranteed
                   </p>
                   <Image
@@ -108,7 +108,7 @@ const EsimPage = () => {
         </div>
       </div>
       <div className='col-span-12'>
-        <div className='max-w-xl w-full mx-auto px-[15px] mt-[60px] mb-[120px]'>
+        <div className='max-w-xl w-full mx-auto px-[15px] sm:mt-[60px] mb-[60px] sm:mb-[120px]'>
           <ProductOverview
             informations={{
               'Loại gói cước': 'Trả trước, Chỉ dữ liệu',
@@ -138,20 +138,20 @@ const EsimPage = () => {
         </div>
       </div>
       <div className='col-span-12'>
-        <div className='bg-background-tutorial bg-center bg-no-repeat bg-cover mb-[120px]'>
-          <div className='max-w-xl w-full mx-auto px-[15px]'>
+        <div className='bg-background-tutorial bg-center bg-no-repeat bg-cover mb-[60px] sm:mb-[120px]'>
+          <div className='max-w-xl w-full mx-auto px-[30px] sm:px-[15px]'>
             <TutorialGetInfoSection />
           </div>
         </div>
       </div>
       <div className='col-span-12'>
-        <div className='max-w-xl w-full mx-auto px-[15px] mb-[120px]'>
+        <div className='max-w-xl w-full mx-auto px-[15px] mb-[60px] sm:mb-[120px]'>
           <HowToUseSection />
         </div>
       </div>
 
       <div className='col-span-12'>
-        <div className='max-w-xl w-full mx-auto px-[15px] mb-[120px]'>
+        <div className='max-w-xl w-full mx-auto px-[15px] mb-[60px] sm:mb-[120px]'>
           <FeedbackSection />
         </div>
       </div>

@@ -15,7 +15,7 @@ const SimilarProductsSection = ({ items }: SimilarProductsSectionProps) => {
           <BigCountryCard
             key={idx}
             singleCountry={item}
-            className='col-span-3 md:col-span-2'
+            className='col-span-3 md:col-span-2 p-[16px] sm:p-[24px]'
           />
         ))}
       </div>
