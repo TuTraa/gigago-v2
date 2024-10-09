@@ -44,3 +44,4 @@ const Configuration: UserConfig = {
   },
 }
 export default Configuration
+// git commit -m 'feat(feature): update i18n'

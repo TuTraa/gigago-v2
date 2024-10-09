@@ -1,4 +1,5 @@
 import React from 'react'
+import LanguageToggle from '../common/language-toggle'
 
 const TopBar = () => {
   return (
@@ -13,7 +14,9 @@ const TopBar = () => {
               </span>
             </p>
           </div>
-          <div>EN</div>
+          <div>
+            <LanguageToggle />
+          </div>
         </div>
       </div>
     </>
